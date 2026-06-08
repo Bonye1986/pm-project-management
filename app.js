@@ -530,10 +530,6 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
   document.body.classList.add("login-view");
 });
 
-document.getElementById("menuToggle").addEventListener("click", () => {
-  document.body.classList.toggle("sidebar-open");
-});
-
 document.addEventListener("click", (event) => {
   const pageButton = event.target.closest("[data-page]");
   if (pageButton) {

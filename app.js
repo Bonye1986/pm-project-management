@@ -494,7 +494,6 @@ function setupNav() {
 function render() {
   const page = pages[state.page];
   const descNode = document.getElementById("pageDesc");
-  document.getElementById("breadcrumb").textContent = page.title;
   document.getElementById("pageTitle").textContent = page.title;
   descNode.textContent = page.desc;
   descNode.hidden = !page.desc;

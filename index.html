@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PM 项目管理系统</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-view">
+  <div id="loginPage" class="login-page">
+    <section class="login-shell">
+      <div class="login-visual">
+        <div class="login-brand">
+          <span class="logo-mark"></span>
+          <div>
+            <strong>项目管理系统</strong>
+            <small>Project Management System</small>
+          </div>
+        </div>
+        <div class="login-copy">
+          <h1>高效协作 · 智能管理 · 驱动成功</h1>
+          <p>统一项目、需求、任务、风险和文档，让外包交付更可控。</p>
+        </div>
+        <div class="login-art" aria-hidden="true">
+          <div class="art-window">
+            <div class="art-sidebar"><i></i><i></i><i></i><i></i></div>
+            <div class="art-board">
+              <span></span><span></span><span></span>
+              <b class="bar-one"></b><b class="bar-two"></b><b class="bar-three"></b>
+            </div>
+          </div>
+          <div class="art-chart"></div>
+          <div class="art-check"></div>
+        </div>
+      </div>
+      <form id="loginForm" class="login-form">
+        <h2>欢迎登录</h2>
+        <p>登录项目管理系统，开启高效协作之旅</p>
+        <label>
+          <span>账号</span>
+          <input id="username" type="text" value="zhangwei" autocomplete="username">
+        </label>
+        <label>
+          <span>密码</span>
+          <input id="password" type="password" value="123456" autocomplete="current-password">
+        </label>
+        <div class="login-row">
+          <label class="check"><input type="checkbox"> 记住我</label>
+          <a href="#">忘记密码?</a>
+        </div>
+        <button class="primary full" type="submit">登录</button>
+        <div class="login-tip">项目管理系统为公司内部使用系统。账号由管理员统一创建，如需使用请联系系统管理员。</div>
+      </form>
+    </section>
+    <footer class="login-footer">© 2024 项目管理系统 版权所有　|　隐私政策　|　服务条款　|　帮助中心</footer>
+  </div>
+
+  <div id="appShell" class="app-shell" hidden>
+    <aside class="sidebar">
+      <div class="system-brand">
+        <span class="logo-mark"></span>
+        <div>
+          <strong>项目管理系统</strong>
+          <small>Project Management System</small>
+        </div>
+      </div>
+      <nav id="mainNav"></nav>
+      <button id="aiAssistant" class="assistant-card">
+        <strong>AI 助手</strong>
+        <span>智能分析 · 风险预警</span>
+      </button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuToggle" class="icon-button">☰</button>
+        <div class="search-box">搜索项目、任务、需求、文档...</div>
+        <div class="top-actions">
+          <button class="icon-button">🔔<span class="badge">12</span></button>
+          <button class="icon-button">📅</button>
+          <button id="logoutBtn" class="user-button"><span class="avatar"></span> 张伟</button>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <div>
+          <p id="breadcrumb" class="breadcrumb">工作台</p>
+          <h1 id="pageTitle">工作台</h1>
+          <p id="pageDesc">查看待办、项目风险、任务进度和客户确认事项。</p>
+        </div>
+        <div id="pageActions" class="page-actions"></div>
+      </section>
+
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <div id="drawer" class="drawer" hidden>
+    <div class="drawer-mask" data-close-drawer></div>
+    <aside class="drawer-panel">
+      <header>
+        <div>
+          <p id="drawerEyebrow"></p>
+          <h2 id="drawerTitle"></h2>
+        </div>
+        <button class="icon-button" data-close-drawer>×</button>
+      </header>
+      <div id="drawerBody" class="drawer-body"></div>
+    </aside>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

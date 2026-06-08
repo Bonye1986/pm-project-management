@@ -451,7 +451,7 @@ nav {
 }
 
 .search-box {
-  width: min(420px, 44vw);
+  width: clamp(260px, 30vw, 420px);
   height: 40px;
   border: 1px solid #e0e8f6;
   border-radius: 999px;
